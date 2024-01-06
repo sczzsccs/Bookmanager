@@ -27,3 +27,8 @@ Java Spring Boot로 만든 Bookmanager 프로젝트(fail)
 
 ### **사용자 인증 및 가입 절차**
 ![image](https://github.com/sczzsccs/Bookmanager/assets/104063759/f2440234-f102-4f26-9e53-17c2d40d6476)
+<br/><br/><br/>
+<br/><br/>
+
+
+![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=username)
