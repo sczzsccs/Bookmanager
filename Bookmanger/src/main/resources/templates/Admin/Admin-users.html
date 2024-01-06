@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<div th:fragment="Admin-users">
+    <h1 style="margin-left: 30px;">관리자 전용 페이지</h1>
+    <br>
+    <h2 style="margin-left: 30px;">사용자 조회 페이지</h2>
+    <p style="font-size: 25px; margin-left: 30px;">
+        <br>
+        <br>페이지를 로드 중 입니다...
+        <br>잠시만 기다려 주세요.</p>
+    <br>
+    <a style="font-size: 20px; margin-left: 30px;" href="/admin/page"><button>>>관리자 메뉴 이동<<</button></a>
+    <br>
+    <br>
+    <input id="UserId" style="font-size: 20px; margin-left: 30px; width: 160px;" type="number" oninput="validateInput(this)" placeholder="사용자 ID 입력">
+    <script>
+        function validateInput(input) {
+            input.value = input.value.replace(/[^0-9]/g, "");
+        }
+    </script>
+    <a id="view" style="font-size: 20px; margin-left: 30px;"><button onclick="ChangeLink()">사용자별 대여 이력 조회</button></a>
+    <script>
+        function ChangeLink() {
+            var userId = document.getElementById("UserId").value;
+            var view = document.getElementById("view");
+            view.href = "/admin/users-history?userId="+userId;
+        }
+    </script>
+</div>
+</body>
+</html>

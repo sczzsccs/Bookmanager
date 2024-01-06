@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>개인정보 동의</title>
+    <script>
+        function isCheckedProceed(event) {
+          var checkbox = document.getElementById('AgreeCheck');
+          if (!checkbox.checked) {
+            // 체크박스가 체크되지 않았을 때: 알림 보내기
+            alert("개인정보 제공 약관에 동의 해야 합니다.");
+            event.preventDefault();
+          }
+          // 체크박스가 체크되었을 때: form 제출을 통해 action URI로 이동
+        }
+    </script>
+</head>
+<body>
+
+<div style="text-align: center;">
+    <h2>개인정보 제공 동의</h2>
+    <form id="terms_form" class="f" action="/user/Agree/isCheck" method="GET" onsubmit="isCheckedProceed(event)">
+
+        <textarea style="width: 70%; height: 700px; padding: 10px; font-size: 22px; box-sizing: border-box; border: solid 2px #1E90FF; border-radius: 5px; resize: both;">
+
+    개인정보를 제공받는 자
+    개인정보를 제공받는 자의 개인정보 이용 목적
+    제공하는 개인정보의 항목
+    개인정보를 제공받는 자의 개인정보 보유 및 이용 기간
+    동의를 거부할 권리가 있다는 사실과 동의 거부 시 불이익이 있는 경우 그 불이익의 내용
+    수집 목적
+    보유 및 이용 기간
+
+    본인은 귀사에 이력서를 제출함에 따라 [개인정보 보호법] 제15조 및 제17조에 따라 아래의 내용으로 개인정보를 수집,
+    이용 및 제공하는데 동의합니다.
+
+    □ 개인정보의 수집 및 이용에 관한 사항
+    - 수집하는 개인정보 항목 (이력서 양식 내용 일체) : 성명, 주민등록번호, 전화번호,
+    주소, 이메일, 가족관계, 학력사항, 경력사항, 자격사항 등과 그 外 이력서 기재 내용
+    일체
+
+    - 개인정보의 이용 목적 : 수집된 개인정보를 사업장 신규 채용 서류 심사 및 인사서
+    류로 활용하며, 목적 외의 용도로는 사용하지 않습니다.
+
+    □ 개인정보의 보관 및 이용 기간
+    - 귀하의 개인정보를 다음과 같이 보관하며, 수집, 이용 및 제공목적이 달성된 경우
+    [개인정보 보호법] 제21조에 따라 처리합니다.
+
+    개인정보보호법
+        제15조(개인정보의 수집․ 이용),
+        제17조(개인정보의 제공),
+        제18조(개인 정보의 이용․ 제공 제한,
+        제22조(동의를 받는 방법)」
+    에 의거 개인정보처리에 관하여 고지를 받았으며 본인은 위와 같이 개인정보 수집 및 이용․ 제공에 동의합니다.
+    성명, 주민등록번호, 전화번호, 주소, 이메일, 가족관계, 학력사항, 경력사항, 자격사항 등과
+    그 外 이력서 기재 내용 일체.
+    본인은 개인정보 보호법 제15조에 의거하여 본인의 개인정보를 제공할 것을 동의합니다. </textarea>
+        <br>
+        <input type="checkbox" id="AgreeCheck" name="isCheck">
+        <label for="AgreeCheck" style="font-size: 22px;">위의 약관에 동의 합니다.<br><br></label>
+        <button type="submit" style="font-size: 22px; padding:10px 40px 10px;">다음단계로</button>
+    </form>
+</div>
+
+</body>
+</html>

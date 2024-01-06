@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:insert="/layout/header/header :: header"></head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <aside th:insert="/layout/menu/side :: side"></aside>
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <div th:insert="/layout/menu/top :: top"></div>
+            <div th:include="${path} :: ${name}"></div>
+        </div>
+    </div>
+
+    <footer th:insert="/layout/footer/footer :: footer"></footer>
+</body>
+</html>

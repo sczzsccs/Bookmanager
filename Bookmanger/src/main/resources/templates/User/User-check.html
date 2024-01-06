@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<div th:fragment="User-check">
+    <h1>&nbsp;사용자 확인 페이지</h1>
+    <br>
+    <br>
+    <form action="/user/check" style="margin-left: 30px; font-size: 22px">
+        <div id="authority"><b>사용자 권한 : [[${authority}]]</b></div>
+        <br>
+        <button id="button" href="/user/check" style="font-size:22px"><b>권한 확인</b></button>
+    </form>
+</div>
+</body>
+</html>

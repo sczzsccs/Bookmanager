@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>도서관리</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico/">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/static/css/styles.css/" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <div class="d-flex" id="wrapper">
+
+            <!-- Sidebar-->
+            <div class="border-end bg-white" id="sidebar-wrapper">
+
+                <h1 class="sidebar-heading border-bottom bg-light" style="font-size: 25px;"><strong>매뉴</strong></h1>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" th:href="${userUrl}">내 정보 관리</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">도서 검색</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">대여기록 조회</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 dropdown-toggle"
+                        href="#!" data-bs-toggle="dropdown">도서 추천</a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#!">이달의 추천도서</a><div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#!">추천하기</a></div>
+
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 dropdown-toggle"
+                        href="#!" data-bs-toggle="dropdown">민원 안내</a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#!">도움말</a><div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#!">Q & A</a></div>
+
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">관리자 페이지<br><관리자 전용></a>
+
+                </div>
+            </div>
+
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+<!--                        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>-->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <h1 class="mt-4"><strong>도서관리 도우미</strong></h1>
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+<!--                                <h3 class="mt-4">함께 읽어요~&nbsp;&nbsp;</h3>-->
+                                <h4 class="nav-item active"><a class="nav-link" href="/home">Home</a></h4>
+                                <h4 class="nav-item"><a class="nav-link" href="#!">사용자 인증/등록</a></h4>
+                                <h4 class="nav-item dropdown">
+
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#"
+                                       role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        대여하기</a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#!">도서 대여</a>
+                                        <a class="dropdown-item" href="#!">도서 반납</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#!">대여 현황</a>
+                                    </div>
+                                </h4>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+
+                <!-- Page content-->
+                <div class="container-fluid">
+                    <h1 class="mt-4">Simple Sidebar</h1>
+                    <p>메뉴의 시작 상태는 작은 화면에서는 접힌 상태로 나타나고, 큰 화면에서는 접히지 않은 상태로 나타납니다. 아래 버튼을 사용하여 전환하면 메뉴가 변경됩니다.</p>
+                    <p>
+                        모든 페이지 콘텐츠를
+                        <code>#page-content-wrapper</code>
+                        . 상단 탐색 모음은 선택 사항이며 데모용입니다. 다음을 사용하여 요소를 생성하세요.
+                        <code>#sidebarToggle</code>
+                        클릭 시 메뉴가 전환되는 ID입니다.
+                    </p>
+                    <h3><br>도서정보 관리</h3>
+                    <h5>도서관리를 원할한 진행을 도와주는 도서관리 도우미 서비스 입니다.</h5>
+                    <h5>사용자 인증 후 원할하게 이용할 수 있습니다^^*</h5>
+
+                    <form action="/test-post" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">제목</label>
+                            <input type="text" class="form-control" name="title">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">내용</label>
+                            <textarea class="form-control" rows="3" name="content"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <br><br><br>
+
+                    <form action="/test-post2" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">test-post2</label>
+                            <input type="text" class="form-control" name="title">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <br><br><br>
+
+                    <form action="/test-post/form" method="post">
+                        이름 : <input type="text" name="st_name"><br>
+                        학번 : <input type="text" name="st_id"><br>
+                        학과 : <input type="text" name="department"><br>
+                        <input type="submit">
+                    </form>
+                    <br><br><br>
+
+                    <form action="/test-post/form2" method="post">
+                        이름 : <input type="text" name="st_name"><br>
+                        학번 : <input type="text" name="st_id"><br>
+                        학과 : <input type="text" name="department"><br>
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

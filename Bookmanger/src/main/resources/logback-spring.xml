@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration scan="true" sacnPeriod="30 seconds"> <!-- logback 구현체가 설정을 확인하는 주기 -->
+    <property name="moduleId" value="firstproject"/> <!-- moduleId는 프로젝트가 설치된 폴더명 또는 구분할 수 있는 식별자이면 됨 -->
+    <property name="type" value="log"/> <!-- 로그파일명을 구성하는 인자 -->
+    <property name="logback" value="logback"/> <!-- log를 저장할 최종 디렉토리명 -->
+    <property name="logdir" value="C:\Users\tget7\OneDrive\바탕 화면\java Spring boot\firstproject\Log"/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <lebel>DEBUG</lebel>
+        </filter>
+        <encoder>
+            <pattern>[%d{MM.dd hh:mm:ss.SS} %-5level %thread] %msg{30}%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+<!--    <root level="DEBUG">-->
+        <appender-ref ref="console"/>
+    </root>
+</configuration>

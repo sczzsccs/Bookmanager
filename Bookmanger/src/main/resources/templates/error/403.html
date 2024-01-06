@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>화면안내 에러</title>
+
+    <style>
+        body {
+            background-color: #f0f0f0;
+            padding: 30px;
+            text-align: center; /* 에러코드를 중앙에 위치시킴 */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid red; /* 검은색 테두리 */
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+        }
+        .error-code {
+            color: #333;
+            font-size: 40px;
+        }
+        h2 {
+            color: #333;
+            font-size: 32px;
+        }
+        p {
+            color: #666;
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="error-code">Error Code 403</h1>
+        <br>
+        <div class="container">
+            <h2>&nbsp;앗, 잘 못 된 장소(화면)으로 들어왔습니다.</h2>
+            <p>
+            <br>&nbsp;&nbsp;다른 장소(화면)으로 이동,
+            <br>&nbsp;&nbsp;아래에 보이는 '이동하기' 버튼을 클릭하면,
+            <br>&nbsp;&nbsp;다른 곳으로 갈 수 있어요 ^^*.</p>
+            <br>
+        </div>
+        <br>
+        <br>
+        <form action="/user/certify">
+            <button style="font-size: 27px;" class="button">>> 사용자 인증/등록 하러 이동하기 <<</button>
+        </form>
+        <br>
+        <form action="/home">
+            <button style="font-size: 27px;" class="button">>> 홈 화면으로 이동하기 <<</button>
+        </form>
+        <script>
+            alert("error!\n접근 권한이 없는 페이지의 접근하였습니다.");
+            alert("error!\n접근 가능한 페이지에 접근합니다.");
+        </script>
+    </div>
+</body>
+</html>

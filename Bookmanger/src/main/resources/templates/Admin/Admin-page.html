@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<div th:fragment="Admin">
+    <h1 style="margin-left: 30px;">관리자 전용 페이지</h1>
+    <p style="font-size: 25px; margin-left: 30px;">
+        <br>페이지를 로드 중 입니다...
+        <br>잠시만 기다려 주세요.</p>
+    <br>
+    <br>
+    <a style="font-size: 20px; margin-left: 30px;" href="/admin/book-create"><button>도서 등록</button></a>
+    <br>
+    <a style="font-size: 20px; margin-left: 30px;" href="/admin/book-delete"><button>도서 삭제</button></a>
+    <br>
+    <br>
+    <p style="font-size: 20px; margin-left: 30px;">(사용자들의 개인 정보가 보여집니다.)</p>
+    <a style="font-size: 20px; margin-left: 30px;" href="/admin/users"><button>사용자 조회</button></a>
+</div>
+</body>
+</html>
