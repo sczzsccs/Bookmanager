@@ -3,10 +3,10 @@ Java Spring Boot로 만든 Bookmanager 프로젝트(fail)
 
 
 ## SpringBoot를 사용하여 만든 개인 프로젝트 입니다.
----------------------
 <br/><br/><br/>
 
 ### **페이지 뷰**
+---------------------
 ![image](https://github.com/sczzsccs/Bookmanager/assets/104063759/78774a8b-c671-475c-81b0-9b04ecd90498)
 ---------------------
 ![image](https://github.com/sczzsccs/Bookmanager/assets/104063759/6f270b77-2762-40ab-97c6-4254ec7a7fab)
