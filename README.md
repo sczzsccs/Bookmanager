@@ -11,7 +11,8 @@ Java Spring Boot로 만든 Bookmanager 프로젝트(fail)
 ![image](https://github.com/sczzsccs/Bookmanager/assets/104063759/6f270b77-2762-40ab-97c6-4254ec7a7fab)
 ![image](https://github.com/sczzsccs/Bookmanager/assets/104063759/3e2f7428-4192-4fcf-88fc-f01e7d8b00bb)
 ![image](https://github.com/sczzsccs/Bookmanager/assets/104063759/477c66db-c868-4534-9e03-5183d3cb0b70)
-![Uploading image.png…]()
+![image](https://github.com/sczzsccs/Bookmanager/assets/104063759/d743067a-252a-4c76-8a14-64d9a9367a1a)
+
 
 
 
